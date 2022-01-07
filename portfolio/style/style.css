@@ -320,6 +320,7 @@ h2 {
     padding-left: 19px;
     padding-top: 3px;
     color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #textarea {
@@ -334,6 +335,7 @@ h2 {
     background: transparent;
     border: solid #bdae82 2px;
     color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 ::placeholder {
@@ -355,4 +357,47 @@ h2 {
     margin-top: 26px;
     color: #000000;
     padding: 0;
+}
+
+.footer {
+    height: 150px;
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 62px;
+}
+
+.wrapper-footer div {
+    margin: 0 20px 0 20px;
+}
+
+.footer li {
+    display: inline-block;
+    margin-left: 14px;
+}
+
+.footer li img {
+    width: 32px;
+    height: 32px;
+}
+
+.rsschool-link {
+    padding-left: 15px;
+}
+
+.date-of-development span {
+    padding-right: 15px;
+    padding-left: 3px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
 }
