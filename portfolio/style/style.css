@@ -39,6 +39,7 @@ body {
     position: absolute;
     top: 20px;
     left: 93px;
+    cursor: pointer;
 }
 
 .header .nav-item {
@@ -49,8 +50,14 @@ body {
     padding-left: 4px;
 }
 
+.header .nav-item .en-lang,
+.header .nav-item .ru-lang {
+    cursor: pointer;
+}
+
 .header .nav-item a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 .header .nav-item a,
@@ -83,7 +90,8 @@ body {
     margin-bottom: 33px;
 }
 
-.hero button {
+.hero button,
+.wrapper-price div button {
     width: 220px;
     height: 55px;
     margin-top: 24px;
@@ -92,6 +100,7 @@ body {
     font-family: "Iter", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 400;
+    cursor: pointer;
 } 
 
 .line-section {
@@ -187,6 +196,7 @@ h2 {
     font-family: "Iter", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .portfolio .wrapper-photo {
@@ -205,16 +215,85 @@ h2 {
     height: 560px;
 }
 
-
-
-
-
-
 .video {
     margin-top: 135px;
 }
 
+.video .video-player {
+    padding-top: 99px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video .video-player .logo-play {
+    position: absolute;
+    cursor: pointer;
+}
 
 .price {
+    margin-top: 139px;
+}
+
+.price .section-heading {
+    left: 45%;
+}
+
+.price .wrapper-price {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 99px;
+    justify-content: center;
+    gap: 25px;
+}
+
+.price .wrapper-price span {
+    display: block
+}
+
+.price .wrapper-price div {
+    text-align: center;
+    width: 450px;
+    height: 505px;
+    border: solid #BDAE82 3px;
+
+}
+
+.wrapper-price h3 {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 51px;
+}
+
+.wrapper-price .cost {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #BDAE82;
+    padding-top: 38px;
+    padding-bottom: 25px;
+}
+
+.wrapper-price span {
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 36px;
+}
+
+.wrapper-price div button {
+    margin-top: 39px;
+}
+
+
+
+
+
+
+.contacts {
     margin-top: 200px;
 }
