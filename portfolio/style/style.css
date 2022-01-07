@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; 
+    background-color: #000000;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    background: url("../assets/img/bg.jpg") no-repeat center center;
+    height: 910px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding-top: 32px;
+    padding-right: 0px;
+}
+
+.header {
+    position: relative;
+}
+
+.logo-camera {
+    position: absolute;
+    top: 20px;
+    left: 93px;
+}
+
+.header .nav-item {
+    margin-left: 29px;
+}
+
+.header .nav-item span {
+    padding-left: 4px;
+}
+
+.header .nav-item a{
+    text-decoration: none;
+}
+
+.header .nav-item a,
+.header .nav-item span {
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.hero {
+    padding-top: 214px;
+    padding-left: 61px;
+    width: 36%;
+}
+
+.hero p {
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 40px;
+}
+
+.hero h1 {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 33px;
+}
+
+.hero button {
+    width: 220px;
+    height: 55px;
+    margin-top: 24px;
+    background-color: #bdae82;
+    border: none;
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+} 
+
+.line-section {
+    border-bottom: solid #bdae82 2px;
+    width: 700px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #bdae82;
+}
+
+.skills {
+    margin-top: 469px;
+}
+
+.skills,
+.portfolio,
+.video,
+.price,
+.contocts {
+    position: relative;
+}
+
+.section-heading {
+    position: absolute;
+    left: 44.7%;
+    top: -24px;
+    background-color: #000000;
+    padding: 0 20px 0 20px;
+}
+
+.skills ul {
+    margin-top: 99px;
+}
+
+.skills li {
+    display: inline-block;
+    text-align: center;
+    width: 250px;
+    margin: 0 70px 0 36px;
+}
+
+.skills li:last-of-type {
+    margin-left: 36px;
+    margin-right: 0;
+}
+
+.skills figcaption {
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 54px;
+}
+
+.skills ul li p {
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 37px;
+    margin-top: 30px;
+}
+
+.portfolio {
+    margin-top: 145px;
+}
+
+.portfolio .section-heading {
+    left: 42%;
+    padding: 0 20px 0 20px;
+}
+
+.portfolio ul {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.portfolio li {
+    display: inline-block;
+}
+
+.portfolio ul li button {
+    width: 220px;
+    height: 55px;
+    background-color: #000000;
+    color: #bdae82;
+    border: solid #bdae82 2px;
+    font-family: "Iter", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.portfolio .wrapper-photo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.portfolio .wrapper-photo div {
+    margin-top: 20px;
+}
+
+.portfolio .wrapper-photo img {
+    width: 450px;
+    height: 560px;
+}
+
+
+
+
+
+
+.video {
+    margin-top: 135px;
+}
+
+
+.price {
+    margin-top: 200px;
+}
