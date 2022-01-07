@@ -27,8 +27,7 @@ body {
     align-items: center;
     list-style: none;
     padding-top: 32px;
-    padding-right: 0px;
-    padding-right: 20px;
+    padding-right: 18px;
 }
 
 .header {
@@ -46,8 +45,13 @@ body {
     margin-left: 29px;
 }
 
-.header .nav-item span {
-    padding-left: 4px;
+.header .contacts-li {
+    margin-right: 30px;
+}
+
+.header .nav-list span {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .header .nav-item .en-lang,
@@ -55,17 +59,30 @@ body {
     cursor: pointer;
 }
 
-.header .nav-item a{
+.header .nav-list a{
     text-decoration: none;
     cursor: pointer;
 }
 
+.scale {
+    transition: transform 0.5s;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+}
+
 .header .nav-item a,
-.header .nav-item span {
+.header .nav-list span,
+.header .nav-list .switch-lang a {
     font-family: "Iter", "Arial", sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #ffffff;
+}
+
+.header .nav-list .switch-lang .en-lang {
+    color: #bdae82;
 }
 
 .hero {
@@ -227,6 +244,8 @@ h2 {
 .video .video-player .logo-play {
     position: absolute;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .price {
