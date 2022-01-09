@@ -5,7 +5,6 @@
 }
 
 html {
-    scroll-behavior: smooth; 
     background-color: #000000;
 }
 
@@ -26,7 +25,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     list-style: none;
-    padding-top: 32px;
+    padding-top: 14px;
     padding-right: 18px;
 }
 
@@ -34,11 +33,20 @@ body {
     position: relative;
 }
 
+.header .container button {
+    border: none;
+}
+
 .logo-camera {
     position: absolute;
     top: 20px;
     left: 93px;
     cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.logo-camera:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .header .nav-item {
@@ -64,14 +72,6 @@ body {
     cursor: pointer;
 }
 
-.scale {
-    transition: transform 0.5s;
-}
-
-.scale:hover {
-    transform: scale(1.2);
-}
-
 .header .nav-item a,
 .header .nav-list span,
 .header .nav-list .switch-lang a {
@@ -81,8 +81,26 @@ body {
     color: #ffffff;
 }
 
+.scale {
+    transition: transform 0.5s;
+}
+
+.scale:hover {
+    transform: scale(1.2);
+    color: #bdae82;
+}
+
 .header .nav-list .switch-lang .en-lang {
     color: #bdae82;
+}
+
+.scale a {
+    transition-duration: 0.5s;
+}
+
+.scale a:hover {
+    color: #bdae82;
+    text-shadow: 0 0 5px #6b6144;
 }
 
 .hero {
@@ -118,7 +136,16 @@ body {
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
+    transition-duration: 0.5s;
 } 
+
+
+.hero button:hover,
+.wrapper-price div button:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+    box-shadow: 0px 0px 10px #00000093 inset;
+}
 
 .line-section {
     border-bottom: solid #bdae82 2px;
@@ -141,8 +168,9 @@ h2 {
 .portfolio,
 .video,
 .price,
-.contocts {
+.contacts {
     position: relative;
+    transition: transform 0.6s ease-in-out;
 }
 
 .section-heading {
@@ -214,6 +242,13 @@ h2 {
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.portfolio ul li button:hover {
+    color: #ffffff;
+    box-shadow: 0px 0px 4px #ffffff inset;
+    text-shadow: 0 0 5px #6b6144;
 }
 
 .portfolio .wrapper-photo {
@@ -227,6 +262,14 @@ h2 {
 .portfolio .wrapper-photo img {
     width: 450px;
     height: 560px;
+    transition-duration: 0.5s;
+}
+
+.portfolio .wrapper-photo img:hover {
+    box-shadow: 0px 0px 15px #bdae82;
+    border: #bdae825d solid 4px;
+    border-radius: 5%;
+    transform: rotate(0.5deg);
 }
 
 .video {
@@ -246,6 +289,11 @@ h2 {
     cursor: pointer;
     background: none;
     border: none;
+    transition-duration: 0.5s;
+}
+
+.video .video-player .logo-play:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .price {
@@ -376,7 +424,15 @@ h2 {
     margin-top: 26px;
     color: #000000;
     padding: 0;
+    transition-duration: 0.5s;
 }
+
+.wrapper-contacts form #button-message:hover {
+transform: scale(0.9);
+color: #ffffff;
+box-shadow: 0px 0px 10px #00000093 inset;
+}
+
 
 .footer {
     height: 150px;
@@ -404,6 +460,11 @@ h2 {
 .footer li img {
     width: 32px;
     height: 32px;
+    transition-duration: 0.5s;
+}
+
+.footer li img:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .rsschool-link {
@@ -419,4 +480,25 @@ h2 {
     text-decoration: none;
     color: #ffffff;
     cursor: pointer;
+}
+
+.wrapper-footer div a {
+    transition-duration: 0.5s;
+    transition: 0.5s;
+}
+
+.wrapper-footer div a:hover {
+    color: #bdae82;
+}
+
+.scroll {
+    transition: transform 0.6s ease-in-out;
+}
+
+a[id="header"]:target ~ #main section.scroll {
+    transform: translateY( 0px );
+}
+
+a[id="skills"]:target ~ #main section.scroll {
+    transform: translateY( 1000px );
 }
