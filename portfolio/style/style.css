@@ -220,7 +220,7 @@ h2 {
 }
 
 .portfolio {
-    margin-top: 145px;
+    margin-top: 144px;
 }
 
 .portfolio .section-heading {
@@ -229,7 +229,7 @@ h2 {
 }
 
 .portfolio ul {
-    margin-top: 100px;
+    margin-top: 99px;
     text-align: center;
 }
 
@@ -333,7 +333,7 @@ h2 {
     font-size: 28px;
     font-weight: 700;
     color: #ffffff;
-    padding-top: 51px;
+    padding-top: 50px;
 }
 
 .wrapper-price .cost {
@@ -425,7 +425,7 @@ h2 {
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
-    margin-top: 26px;
+    margin-top: 25px;
     color: #000000;
     padding: 0;
     transition-duration: 0.5s;
