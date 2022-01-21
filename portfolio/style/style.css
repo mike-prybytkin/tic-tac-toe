@@ -7,6 +7,7 @@
 html {
     scroll-behavior: smooth;
     background-color: #000000;
+    //overflow-y: hidden;
 }
 
 .container {
@@ -325,7 +326,6 @@ h2 {
     width: 450px;
     height: 505px;
     border: solid #BDAE82 3px;
-
 }
 
 .wrapper-price h3 {
@@ -493,4 +493,72 @@ h2 {
 
 .wrapper-footer div a:hover {
     color: #bdae82;
+}
+
+
+/* ------- breakpoints ------- */
+
+
+@media (max-width:1460px){
+
+    .container{
+        max-width: 1200px;
+        width: auto;
+    }
+
+    .hero {
+        padding-left: 21px;
+    }
+
+    .skills {
+        margin-top: 435px;
+    }
+
+    .skills ul {
+        text-align: center;
+    }
+
+    .skills li {
+        margin: 0 50px 0 50px;
+    }
+    
+    .skills li:last-of-type {
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    
+    .skills figcaption {
+        margin-top: 44px;
+    }
+    
+    .skills ul li p {
+        margin-top: 25px;
+    }
+
+    .portfolio,
+    .video,
+    .price {
+        margin-top: 105px;
+    }
+
+    .video-player .video-img {
+        width: 1140px;
+    }
+
+    .price .wrapper-price div {
+        width: 400px;
+        height: 505px;
+    }
+
+    .footer {
+        height: 100px;
+    }
+
+    .wrapper-footer {
+        padding-top: 40px;
+    }
+
+
+    
+
 }
