@@ -26,13 +26,25 @@ body {
     top: 0;
 }
 
-.nav-list {
+.nav {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+}
+
+.nav .nav-list {
+    list-style: none;
+    padding-top: 14px;
+}
+
+.nav .nav-language {
     list-style: none;
     padding-top: 14px;
     padding-right: 18px;
+}
+
+.nav-item,
+.nav-language li{
+    display: inline-block;
 }
 
 .header .container button {
@@ -56,16 +68,16 @@ body {
 }
 
 .header .nav-item {
-    margin-left: 29px;
+    margin-left: 27px;
 }
 
 .header .contacts-li {
     margin-right: 30px;
 }
 
-.header .nav-list span {
-    padding-left: 10px;
-    padding-right: 10px;
+.header .nav-language span {
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .header .nav-item .en-lang,
@@ -73,30 +85,33 @@ body {
     cursor: pointer;
 }
 
-.header .nav-list a{
+.header .nav-list a,
+.header .nav-language a{
     text-decoration: none;
     cursor: pointer;
 }
 
 .header .nav-item a,
-.header .nav-list span,
-.header .nav-list .switch-lang a {
+.header .nav-language span,
+.header .nav-language .switch-lang a {
     font-family: "Iter", "Arial", sans-serif;
     font-size: 22px;
     font-weight: 400;
     color: #ffffff;
 }
 
-.scale {
+.nav .nav-list .scale,
+.nav .nav-language .scale {
     transition: transform 0.5s;
 }
 
-.scale:hover {
+.nav .nav-list .scale:hover,
+.nav .nav-language .scale:hover {
     transform: scale(1.2);
     color: #bdae82;
 }
 
-.header .nav-list .switch-lang .en-lang {
+.header .nav-language .switch-lang .en-lang {
     color: #bdae82;
 }
 
@@ -562,8 +577,42 @@ h2 {
 @media (max-width:1200px){
 
     .container{
-        max-width: 768px;
+        max-width: 970px;
         width: auto;
     }
 
+    .nav-item {
+    display: block;
+    }
+
+    .nav {
+        display: block;
+        text-align: right;
+    }
+
+    .nav .nav-list .scale:hover,
+    .nav .nav-language .scale:hover {
+    transform: none;
+    }
+
+    .header .contacts-li {
+        margin-right: 0px;
+    }
+
+    .nav-list .nav-item {
+        margin-top: 5px;
+    }
+
+    .skills ul li,
+    .skills ul li:last-of-type {
+        margin: 50px 50px 0 50px;
+    }
+
+    .video-player .video-img {
+        width: 940px;
+    }
+
+    .price .wrapper-price div {
+        width: 360px;
+    }
 }
