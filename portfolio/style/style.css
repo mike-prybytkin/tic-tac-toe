@@ -647,7 +647,7 @@ h2 {
     }
 
     .video-player .video-img {
-        width: 940px;
+        width: 96%;
     }
 
     .price .wrapper-price div {
@@ -656,7 +656,7 @@ h2 {
 }
 
 
-@media (max-width:768px){
+@media (max-width:769px){
 
     body {
         background: url("../assets/img/bg.jpg");
@@ -667,6 +667,7 @@ h2 {
 
     .container{
         width: auto;
+        /* overflow: hidden; */
     }
 
     .burger-menu {
@@ -679,7 +680,7 @@ h2 {
 
     .nav {
         display: flex;
-        margin-right: 47px;
+        margin-right: 64px;
     }
 
     .nav-language {
@@ -716,7 +717,7 @@ h2 {
 
     .line-section {
         width: 364px;
-        margin-left: 27%;
+        margin: 0 auto;
     }
     
     h2 {
@@ -728,13 +729,12 @@ h2 {
     }
 
     .section-heading {
-        left: 42.8%;
+        left: 41.8%;
         top: -20px;
     }
 
     .skills ul {
         margin-top: 49px;
-        margin-left: 2%;
     }
     
     .skills ul li,
@@ -758,7 +758,7 @@ h2 {
     }
     
     .portfolio .section-heading {
-        left: 39%;
+        left: 38.5%;
         padding: 0 20px 0 20px;
     }
     
@@ -766,7 +766,7 @@ h2 {
         margin-top: 90px;
         width: 450px;
         height: 120px;
-        margin-left: calc(51% - 450px/2);
+        margin-left: calc(50% - 450px/2);
     }
     
     .portfolio li {
@@ -775,16 +775,19 @@ h2 {
 
     .portfolio .wrapper-photo {
         padding-top: 55px;
-        padding-left: 2%;
-        gap: 21px;
+        gap: 20px;
     }
 
     .video {
-        margin-top: 113px;
+        margin-top: 118px;
     }
 
+    /* .video-player {
+        overflow: hidden;
+    } */
+
     .video-player .video-img {
-        width: 768px;
+        width: 766px;
         height: 418px;
     }
     
@@ -795,9 +798,90 @@ h2 {
     .logo-play img {
         width: 65px;
         height: 65px;
-        margin-left: 10px;
     }
 
+    .price {
+        margin-top: 119px;
+    }
     
+    .price .section-heading {
+        left: 42.1%;
+    }
+    
+    .price .wrapper-price {
+        margin-top: 89px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .price .wrapper-price div {
+        width: 420px;
+    }
+
+    .wrapper-price h3 {
+        font-size: 32px;
+        padding-top: 48px;
+    }
+    
+    .wrapper-price .cost {
+        padding-top: 40px;
+    }
+
+    .wrapper-price div button {
+        margin-top: 39px;
+    }
+
+    .contacts {
+        background: url('../assets/img/contacts-bg.jpg') no-repeat;
+        height: 600px;
+        margin-top: 80px;
+        background-position: -233px 0px;
+        background-size: auto 600px;
+    }
+
+    .wrapper-contacts {
+        width: 460px;
+        padding-top: 70px;
+        padding-right: 0;
+        text-align: center;
+        float: none;
+        margin-left: calc(50% - 460px / 2);
+    }
+
+    .wrapper-contacts form {
+        padding-top: 53px;
+    }
+
+    .footer {
+        height: 190px;
+    }
+    
+    .wrapper-footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 28px;
+        align-items: center;
+    }
+
+    .date-of-development span:first-of-type {
+        padding-left: 5px;
+    }
+
+    .date-of-development span {
+        padding-right: 15px;
+        padding-left: 5px;
+    }
+    
+    .wrapper-footer div {
+        margin: 0 0 16px 0;
+        padding: 0;
+    }
+
+    .wrapper-footer div:last-of-type {
+        margin-top: 15px;
+        padding-right: 10px;
+    }
 
 }
