@@ -124,6 +124,39 @@ body {
     text-shadow: 0 0 5px #6b6144;
 }
 
+/*burger-menu start*/
+
+.burger-menu {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    padding-top: 2px;
+}
+
+.burger-menu .line-burger {
+    width: 50px;
+    height: 3px;
+    background-color: #ffffff;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    margin: 10px auto;
+}
+
+#burger-menu.is-active .line-burger:nth-child(2){
+    opacity: 0;
+}
+  
+#burger-menu.is-active .line-burger:nth-child(1){
+    transform: translateY(13px) rotate(45deg);
+}
+  
+#burger-menu.is-active .line-burger:nth-child(3){
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/*burger-menu finish*/
+
 .hero {
     padding-top: 214px;
     padding-left: 81px;
@@ -588,6 +621,11 @@ h2 {
     .nav {
         display: block;
         text-align: right;
+        margin-right: 20px;
+    }
+
+    .nav .nav-language {
+        padding-right: 0;
     }
 
     .nav .nav-list .scale:hover,
@@ -600,7 +638,7 @@ h2 {
     }
 
     .nav-list .nav-item {
-        margin-top: 5px;
+        margin-top: 8px;
     }
 
     .skills ul li,
@@ -615,4 +653,65 @@ h2 {
     .price .wrapper-price div {
         width: 360px;
     }
+}
+
+
+@media (max-width:768px){
+
+    body {
+        background: url("../assets/img/bg.jpg");
+        height: 590px;
+        background-position: -5px -30px;
+        background-size: auto 620px;
+    }
+
+    .container{
+        width: auto;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        margin-right: 47px;
+    }
+
+    .nav-language {
+        margin-right: 21px;
+    }
+
+    .nav-language li span {
+        margin: 0 7px;
+    }
+
+    .logo-camera {
+        left: 60px;
+    }
+
+    .hero {
+        padding-top: 110px;
+        padding-left: 60px;
+        width: 65%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+    
+    .hero p {
+        line-height: 24.2px;
+    }
+    
+    .hero button,
+    .wrapper-price div button {
+        margin-top: 60px;
+    } 
+
 }
