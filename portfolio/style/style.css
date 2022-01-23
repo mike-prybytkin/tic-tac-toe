@@ -753,6 +753,51 @@ h2 {
         margin-top: 30px;
     }
 
+    .portfolio {
+        margin-top: 160px;
+    }
+    
+    .portfolio .section-heading {
+        left: 39%;
+        padding: 0 20px 0 20px;
+    }
+    
+    .portfolio ul {
+        margin-top: 90px;
+        width: 450px;
+        height: 120px;
+        margin-left: calc(51% - 450px/2);
+    }
+    
+    .portfolio li {
+        padding-bottom: 4px;
+    }
+
+    .portfolio .wrapper-photo {
+        padding-top: 55px;
+        padding-left: 2%;
+        gap: 21px;
+    }
+
+    .video {
+        margin-top: 113px;
+    }
+
+    .video-player .video-img {
+        width: 768px;
+        height: 418px;
+    }
+    
+    .video .video-player {
+        padding-top: 89px;
+    }
+    
+    .logo-play img {
+        width: 65px;
+        height: 65px;
+        margin-left: 10px;
+    }
+
     
 
 }
