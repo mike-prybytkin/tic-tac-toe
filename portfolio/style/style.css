@@ -891,7 +891,7 @@ h2 {
     .nav .nav-list {
         position: absolute;
         width: 620px;
-        height: 1024px;
+        height: 100vh;
         overflow-x: hidden;
         right: -620px;
         background-color: #000000;
@@ -901,7 +901,8 @@ h2 {
         z-index: 500;
         right: 0;
         bottom: 0;
-        top: 0;  
+        top: 0;
+        overflow-y: hidden;
     }
 
     .burger-menu {
