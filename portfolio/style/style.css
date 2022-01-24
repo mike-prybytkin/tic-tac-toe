@@ -646,6 +646,10 @@ h2 {
         margin: 50px 50px 0 50px;
     }
 
+    .portfolio li {
+        padding-bottom: 4px;
+    }
+
     .video-player .video-img {
         width: 96%;
     }
@@ -667,7 +671,6 @@ h2 {
 
     .container{
         width: auto;
-        /* overflow: hidden; */
     }
 
     .nav-list {
@@ -763,10 +766,6 @@ h2 {
         width: 450px;
         height: 120px;
         margin-left: calc(50% - 450px/2);
-    }
-    
-    .portfolio li {
-        padding-bottom: 4px;
     }
 
     .portfolio .wrapper-photo {
@@ -902,8 +901,7 @@ h2 {
         z-index: 500;
         right: 0;
         bottom: 0;
-        top: 0;
-        
+        top: 0;  
     }
 
     .burger-menu {
@@ -919,6 +917,153 @@ h2 {
         right: 0;
         transition: 1s;
     }
+}
 
 
+@media (max-width:767px){
+
+    .video-player .video-img {
+        width: 98%;
+    }
+}
+
+@media (max-width:600px){
+
+    .nav .nav-list {
+        width: 420px;
+    }
+
+    .burger-menu {
+        display: block;
+        padding-right: 115px;
+    }
+
+    .section-heading {
+        left: 39.8%;
+    }
+
+    .portfolio .section-heading {
+        left: 36.4%;
+    }
+
+    .price .section-heading {
+        left: 40.1%;
+    }
+}
+
+@media (max-width:480px){
+
+    .container {
+        max-width: 100%;
+    }
+
+    .nav .nav-list {
+        width: 200px;
+        padding-left: 0px;
+    }
+
+    .header .nav-item a {
+        font-size: 26px;
+    }  
+
+    .burger-menu {
+        padding-right: 70px;
+    }
+
+    .logo-camera {
+        left: 20px;
+    }
+
+    .hero {
+        padding-left: 20px;
+    }
+
+    .line-section {
+        width: 98%;
+    }
+
+    .skills {
+        margin-top: 150px;
+    }
+
+    .skills .section-heading {
+        left: 30.8%;
+    }
+
+    .skills ul li,
+    .skills ul li:last-of-type {
+        width: 250px;
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .skills ul li figcaption {
+        margin-top: 10px;
+    }
+
+    .skills ul li p {
+        margin-top: 10px;
+    }
+
+    .portfolio {
+        margin-top: 80px;
+    }
+
+    .portfolio .section-heading {
+        left: 23%;
+    }
+
+    .portfolio ul {
+        padding-top: 60px;
+        width: 98%;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .portfolio .wrapper-photo {
+        flex-wrap: wrap;
+        padding-top: 100px;
+        gap: 5px;
+    }
+
+    .portfolio .wrapper-photo img {
+        width: 290px;
+        height: auto;
+    }
+
+    .video .section-heading {
+        left: 30%;
+    }
+
+    .video-player .video-img {
+        height: auto;
+    }
+
+    .price .section-heading {
+        left: 33%;
+    }
+
+    .price .wrapper-price div {
+        width: 96%;
+        height: 505px;
+    }
+
+    .contacts .wrapper-contacts {
+        width: 98%;
+        float: right;
+    }
+
+    .wrapper-contacts form {
+        width: 96%;
+    }
+
+    .wrapper-contacts form input,
+    .wrapper-contacts form #textarea {
+        width: 90%;
+    }
+
+
+
+    
+    
 }
