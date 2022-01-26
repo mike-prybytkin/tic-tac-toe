@@ -1,1 +1,25 @@
-console.log('Все пункты ТЗ выполнены полностью:\n1. Вёрстка валидная +10\n2. Вёрстка семантическая +20\n3. Вёрстка соответствует макету +48\n4. Требования к css + 12\n5. Интерактивность, реализуемая через css +20\nИтого 110 балло => 100 баллов за выполненное задание');
+const burgerMenu = document.querySelector('.burger-menu');
+const nav = document.querySelector('.nav');
+
+function toggleMenu() {
+    burgerMenu.classList.toggle('is-active');
+    nav.classList.toggle('is-active');
+};
+burgerMenu.addEventListener('click', toggleMenu);
+
+
+
+
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach((el) => el.addEventListener('click', closeMenu));
+
+function closeMenu(event) {
+    if (event.target.classList.contains('nav-link')) {
+    burgerMenu.classList.remove('is-active');
+    nav.classList.remove('is-active');
+    }
+};
+
+
+
+
