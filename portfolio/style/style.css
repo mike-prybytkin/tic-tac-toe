@@ -280,7 +280,7 @@ h2 {
     padding: 0 20px 0 20px;
 }
 
-.portfolio ul {
+.portfolio-btns {
     margin-top: 99px;
     text-align: center;
 }
@@ -289,7 +289,7 @@ h2 {
     display: inline-block;
 }
 
-.portfolio ul li button {
+.portfolio-btn {
     width: 220px;
     height: 55px;
     background-color: #000000;
@@ -302,7 +302,7 @@ h2 {
     transition-duration: 0.5s;
 }
 
-.portfolio ul li button:hover {
+.portfolio-btn:hover {
     color: #ffffff;
     box-shadow: 0px 0px 4px #ffffff inset;
     text-shadow: 0 0 5px #6b6144;
@@ -1088,4 +1088,12 @@ h2 {
     .wrapper-contacts form #textarea {
         width: 90%;
     }
+}
+
+
+/*-- JS events --*/
+
+.portfolio-btn.active-button {
+    background-color: #bdae82;
+    color: #000000;
 }

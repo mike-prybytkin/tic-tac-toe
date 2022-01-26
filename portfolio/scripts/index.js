@@ -1,3 +1,5 @@
+//burger-menu
+
 const burgerMenu = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
 
@@ -6,8 +8,6 @@ function toggleMenu() {
     nav.classList.toggle('is-active');
 };
 burgerMenu.addEventListener('click', toggleMenu);
-
-
 
 
 const navLinks = document.querySelectorAll('.nav-link');
@@ -19,6 +19,24 @@ function closeMenu(event) {
     nav.classList.remove('is-active');
     }
 };
+
+
+//switch images of autumn/spring/summer/winter
+
+const portfolioBtns = document.querySelector('.portfolio-btns');
+const portfolioBtn = document.querySelector('.portfolio-btn');
+const portfolioImages = document.querySelectorAll('.portfolio-image');
+
+function changeImage(event) {
+    let dataAttribute = event.target.dataset.season;
+    if(event.target.classList.contains('portfolio-btn')) {
+        portfolioImages.forEach((img, index) => img.src = `./assets/img/${dataAttribute}/${index + 1}.jpg`);
+    }
+};
+
+portfolioBtns.addEventListener('click', changeImage);
+
+
 
 
 
