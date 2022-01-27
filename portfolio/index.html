@@ -8,7 +8,7 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <title>portfolio</title>
+    <title data-i18="head-title">portfolio</title>
 </head>
 <body>
     <header class="header">
@@ -147,10 +147,10 @@
                 <div class="wrapper-contacts">
                     <h2 data-i18="contact-me">Contact me</h2>
                     <form method=POST enctype='multipart/form-data'>
-                        <input id="email" type="email" placeholder="E-mail">
-                        <input id="tel" type="tel" placeholder="Phone">
-                        <textarea name="comment" id="textarea" cols="30" rows="5" placeholder="Message"></textarea>
-                        <input id="button-message" type="submit" value="Send message" data-i18="send-message">
+                        <input data-i18="email" id="email" type="email" placeholder="E-mail">
+                        <input data-i18="phone" id="tel" type="tel" placeholder="Phone">
+                        <textarea data-i18="message" name="comment" id="textarea" cols="30" rows="5" placeholder="Message"></textarea>
+                        <input id="button-message" type="submit" value="Send message" data-i18="sendmessage">
                     </form>
                 </div>
             </section>
@@ -160,8 +160,8 @@
     <footer class="footer">
         <div class="container">
             <div class="wrapper-footer">
-                <div class="date-of-development"> <span>&copy;</span> <span>2022</span> <span><a href="https://github.com/mike-prybytkin" title="my github">github</a></span></div>
-                <div class="rsschool-link"><a href="https://rs.school/js-stage0/" title="RS school">Rolling Scopes School</a></div>
+                <div class="date-of-development"> <span>&copy;</span> <span>2022</span> <span><a data-i18="github" href="https://github.com/mike-prybytkin" title="my github">github</a></span></div>
+                <div class="rsschool-link"><a data-i18="rs-school" href="https://rs.school/js-stage0/" title="RS school">Rolling Scopes School</a></div>
                 <div>
                     <ul>
                         <li><a href="https://www.instagram.com/" title="instagram"><img src="./assets/svg/inst-1.svg" alt="instagram" title="instagram"></a></li>
@@ -174,6 +174,6 @@
         </div>
     </footer>
     
-    <script src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

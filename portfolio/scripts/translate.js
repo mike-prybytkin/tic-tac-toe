@@ -40,7 +40,16 @@ const i18Obj = {
       'send-message': 'Send message',
       'standard': 'Standard',
       'premium': 'Premium',
-      'gold': 'Gold'
+      'gold': 'Gold',
+      'head-title': 'portfolio',
+      'ru': 'ru',
+      'en': 'en',
+      'rs-school': 'Rolling Scopes School',
+      'github': 'github',
+      'email': 'E-mail',
+      'phone': 'Phone',
+      'message': 'Message',
+      'sendmessage': 'Send message'
     },
     'ru': {
       'skills': 'Навыки',
@@ -83,7 +92,16 @@ const i18Obj = {
       'send-message': 'Отправить',
       'standard': 'Стандарт',
       'premium': 'Премиум',
-      'gold': 'Золотой'
+      'gold': 'Золотой',
+      'head-title': 'портфолио',
+      'ru': 'рус',
+      'en': 'анг',
+      'rs-school': 'Школа Роллинг Скоупс',
+      'github': 'гитхаб',
+      'email': 'Эл. почта',
+      'phone': 'Телефон',
+      'message': 'Комментарий',
+      'sendmessage': 'Отправить сообщение'
     }
   }
   export default i18Obj;

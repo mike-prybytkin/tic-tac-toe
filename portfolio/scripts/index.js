@@ -1,4 +1,4 @@
-//burger-menu
+//--burger-menu--
 
 const burgerMenu = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
@@ -21,7 +21,7 @@ function closeMenu(event) {
 };
 
 
-//switch images of autumn/spring/summer/winter
+//--switch images of autumn/spring/summer/winter--
 
 const portfolioBtns = document.querySelector('.portfolio-btns');
 const portfolioBtn = document.querySelectorAll('.portfolio-btn');
@@ -37,7 +37,7 @@ function changeImage(event) {
 portfolioBtns.addEventListener('click', changeImage);
 
 
-//switch buttons colour
+//--switch buttons colour--
 
 portfolioBtns.addEventListener('click', (event) => {
     portfolioBtn.forEach((el) => el.classList.remove('active'));
@@ -45,7 +45,7 @@ portfolioBtns.addEventListener('click', (event) => {
 });
 
 
-//switch language buttons colour
+//--switch language buttons colour--
 
 const navLanguage = document.querySelector('.nav-language');
 const changeColor = document.querySelectorAll('.change-color');
@@ -54,6 +54,35 @@ navLanguage.addEventListener('click', (event) => {
     changeColor.forEach((el) => el.classList.remove('active-lang'));
     event.target.classList.add('active-lang')
 });
+
+
+//--translate web-site--
+
+import i18Obj from './translate.js';
+
+const enLang = document.querySelector('.en-lang');
+const ruLang = document.querySelector('.ru-lang');
+
+function getTranslate(lang) {
+    let dataLanguage = document.querySelectorAll('[data-i18]');
+    dataLanguage.forEach((item) => item.textContent = i18Obj[lang][item.dataset.i18]);
+
+    if (lang === 'ru') {
+        document.querySelector('#email').placeholder = i18Obj.ru.email;
+        document.querySelector('#tel').placeholder = i18Obj.ru.phone;
+        document.querySelector('#textarea').placeholder = i18Obj.ru.message;
+        document.querySelector('#button-message').value = i18Obj.ru.sendmessage;
+    } else {
+        document.querySelector('#email').placeholder = i18Obj.en.email;
+        document.querySelector('#tel').placeholder = i18Obj.en.phone;
+        document.querySelector('#textarea').placeholder = i18Obj.en.message;
+        document.querySelector('#button-message').value = i18Obj.en.sendmessage;
+    }
+};
+
+
+enLang.addEventListener('click', () => getTranslate('en'));
+ruLang.addEventListener('click', () => getTranslate('ru'));
 
 
 
