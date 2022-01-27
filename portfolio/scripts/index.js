@@ -24,7 +24,7 @@ function closeMenu(event) {
 //switch images of autumn/spring/summer/winter
 
 const portfolioBtns = document.querySelector('.portfolio-btns');
-const portfolioBtn = document.querySelector('.portfolio-btn');
+const portfolioBtn = document.querySelectorAll('.portfolio-btn');
 const portfolioImages = document.querySelectorAll('.portfolio-image');
 
 function changeImage(event) {
@@ -36,6 +36,24 @@ function changeImage(event) {
 
 portfolioBtns.addEventListener('click', changeImage);
 
+
+//switch buttons colour
+
+portfolioBtns.addEventListener('click', (event) => {
+    portfolioBtn.forEach((el) => el.classList.remove('active'));
+    event.target.classList.add('active')
+});
+
+
+//switch language buttons colour
+
+const navLanguage = document.querySelector('.nav-language');
+const changeColor = document.querySelectorAll('.change-color');
+
+navLanguage.addEventListener('click', (event) => {
+    changeColor.forEach((el) => el.classList.remove('active-lang'));
+    event.target.classList.add('active-lang')
+});
 
 
 

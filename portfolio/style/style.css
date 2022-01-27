@@ -115,10 +115,6 @@ body {
     color: #bdae82;
 }
 
-.header .nav-language .switch-lang .en-lang {
-    color: #bdae82;
-}
-
 .scale a {
     transition-duration: 0.5s;
 }
@@ -1093,7 +1089,11 @@ h2 {
 
 /*-- JS events --*/
 
-.portfolio-btn.active-button {
+.header .nav-language .switch-lang .active-lang {
+    color: #bdae82;
+}
+
+.portfolio-btns .active {
     background-color: #bdae82;
     color: #000000;
 }
