@@ -21,44 +21,30 @@ body {
     margin: 0 auto;
 }
 
-.header .container {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 22px;
+.header {
+    position: sticky;
+    top: 0;
 }
 
 .nav {
-    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav .nav-list {
     list-style: none;
+    padding-top: 14px;
+}
+
+.nav .nav-language {
+    list-style: none;
+    padding-top: 14px;
+    padding-right: 18px;
 }
 
 .nav-item,
 .nav-language li{
     display: inline-block;
-}
-
-.features-header {
-    margin-right: 20px;
-    display: flex;
-}
-
-.features-header .nav-language {
-    padding-top: 10px;
-    margin-right: 28px;
-}
-
-.features-header .switch-theme-button {
-    background: url("../assets/svg/sun-logo.svg") no-repeat center center; 
-    height: 45px;
-    width: 45px;
-    transition-duration: 0.5s;
-}
-
-.switch-theme-button:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .header .container button {
@@ -125,6 +111,10 @@ body {
     color: #bdae82;
 }
 
+.header .nav-language .switch-lang .en-lang {
+    color: #bdae82;
+}
+
 .scale a {
     transition-duration: 0.5s;
 }
@@ -151,11 +141,6 @@ body {
     display: block;
     transition: all 0.3s ease-in-out;
     margin: 10px auto;
-    transition-duration:  0.3s;
-}
-
-.burger-menu:hover > span {
-    background-color: #bdae82;
 }
 
 #burger-menu.is-active .line-burger:nth-child(2){
@@ -173,7 +158,7 @@ body {
 /*burger-menu finish*/
 
 .hero {
-    padding-top: 212px;
+    padding-top: 214px;
     padding-left: 81px;
     width: 36%;
 }
@@ -184,7 +169,6 @@ body {
     font-weight: 400;
     color: #ffffff;
     line-height: 40px;
-    height: 100px;
 }
 
 .hero h1 {
@@ -199,7 +183,7 @@ body {
 .wrapper-price div button {
     width: 220px;
     height: 55px;
-    margin-top: 44px;
+    margin-top: 24px;
     background-color: #bdae82;
     border: none;
     font-family: "Iter", "Arial", sans-serif;
@@ -292,7 +276,7 @@ h2 {
     padding: 0 20px 0 20px;
 }
 
-.portfolio-btns {
+.portfolio ul {
     margin-top: 99px;
     text-align: center;
 }
@@ -301,7 +285,7 @@ h2 {
     display: inline-block;
 }
 
-.portfolio-btn {
+.portfolio ul li button {
     width: 220px;
     height: 55px;
     background-color: #000000;
@@ -314,7 +298,7 @@ h2 {
     transition-duration: 0.5s;
 }
 
-.portfolio-btn:hover {
+.portfolio ul li button:hover {
     color: #ffffff;
     box-shadow: 0px 0px 4px #ffffff inset;
     text-shadow: 0 0 5px #6b6144;
@@ -365,7 +349,7 @@ h2 {
 }
 
 .price {
-    margin-top: 140px;
+    margin-top: 139px;
 }
 
 .price .section-heading {
@@ -375,7 +359,7 @@ h2 {
 .price .wrapper-price {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 99px;
     justify-content: center;
     gap: 25px;
 }
@@ -404,7 +388,7 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     color: #BDAE82;
-    padding-top: 42px;
+    padding-top: 38px;
     padding-bottom: 25px;
 }
 
@@ -442,7 +426,7 @@ h2 {
 .wrapper-contacts form {
     overflow: hidden;
     width: 460px;
-    padding-top: 59px;
+    padding-top: 55px;
 }
 
 .wrapper-contacts form input {
@@ -468,7 +452,7 @@ h2 {
     font-weight: 400;
     background: transparent;
     border: solid #bdae82 2px;
-    color: #bdae82;
+    color: #ffffff;
     background: rgba(0, 0, 0, 0.5);
 }
 
@@ -513,8 +497,6 @@ h2 {
     display: flex;
     justify-content: space-between;
     padding-top: 62px;
-    padding-bottom: 52px;
-    background-color: #000000;
 }
 
 .wrapper-footer div {
@@ -573,7 +555,6 @@ h2 {
 
     .hero {
         padding-left: 21px;
-        width: 450px;
     }
 
     .skills {
@@ -608,7 +589,7 @@ h2 {
     }
 
     .video-player .video-img {
-        width: 100%;
+        width: 1140px;
     }
 
     .price .wrapper-price div {
@@ -629,16 +610,8 @@ h2 {
 @media (max-width:1200px){
 
     .container{
-        max-width: 100%;
+        max-width: 970px;
         width: auto;
-    }
-
-    .header .container {
-        display: flex;
-        flex-direction: column-reverse;
-        padding-top: 15px;
-        align-items: flex-end;
-        padding-right: 40px;
     }
 
     .nav-item {
@@ -646,12 +619,9 @@ h2 {
     }
 
     .nav {
-        margin-right: 25px;
-    }
-
-    .features-header {
-        padding-top: 15px;
-        margin-right: 0;
+        display: block;
+        text-align: right;
+        margin-right: 20px;
     }
 
     .nav .nav-language {
@@ -668,21 +638,7 @@ h2 {
     }
 
     .nav-list .nav-item {
-        margin-top: 15px;
-    }
-
-    .header .nav-item a {
-        font-size: 26px;
-    } 
-
-    .logo-camera {
-        left: 40px;
-    }
-
-    .hero {
-        padding-top: 50px;
-        padding-left: 40px;
-        width: 70%;
+        margin-top: 8px;
     }
 
     .skills ul li,
@@ -695,7 +651,7 @@ h2 {
     }
 
     .video-player .video-img {
-        width: 100%;
+        width: 96%;
     }
 
     .price .wrapper-price div {
@@ -717,15 +673,8 @@ h2 {
         width: auto;
     }
 
-    .header .container {
-        padding-right: 20px;
-    }
-
-    .features-header {
-        display: flex;
-        flex-direction: row;
-        padding-top: 4px;
-        margin: 0;
+    .nav-list {
+        display: none;
     }
 
     .nav {
@@ -733,14 +682,8 @@ h2 {
         margin-right: 0;
     }
 
-    .features-header .nav-language {
-        margin-right: 25px;
-        align-self: center;
-        padding-top: 0;
-    }
-
-    .switch-theme-button {
-        margin-right: 30px;
+    .nav-language {
+        margin-right: 21px;
     }
 
     .nav-language li span {
@@ -754,7 +697,7 @@ h2 {
     .hero {
         padding-top: 110px;
         padding-left: 60px;
-        width: 60%;
+        width: 65%;
     }
 
     .hero h1 {
@@ -768,7 +711,7 @@ h2 {
     
     .hero button,
     .wrapper-price div button {
-        margin-top: 30px;
+        margin-top: 60px;
     } 
 
     .line-section {
@@ -795,9 +738,9 @@ h2 {
     
     .skills ul li,
     .skills ul li:last-of-type {
-        width: 290px;
+        width: 300px;
         height: 224px;
-        margin: 35px 25px 0 25px;
+        margin: 35px 20px 0 20px;
     }
 
     .skills figcaption {
@@ -835,7 +778,7 @@ h2 {
     }
 
     .video-player .video-img {
-        width: 100%;
+        width: 750px;
         height: 418px;
     }
     
@@ -932,80 +875,64 @@ h2 {
         padding-right: 10px;
     }
 
-    /*----burger-menu realization----*/
-
-    .body.is-active {
-        overflow-y: hidden;
-        z-index: -5;
+    .header {
+        position: static;
     }
 
     .header .nav-item a {
-        font-size: 34px;
-        line-height: 74px;
+    font-size: 34px;
     }
 
-    .nav {
-        z-index: 10;
-        position: fixed;
-        right: -620px;
-        gap: 0;
-        top: 0;
-        background-color: #000000;
-        width: 620px;
-        height: 100%;
-        transition: all 0.3s;
+    .header .nav-item {
+        margin-top: 0;
+        margin-bottom: 49px;
     }
 
-    .nav-list {
-        flex-direction: column;
-        margin-top: 110px;
-        margin-left: 100px;
+    .nav .nav-list {
         position: absolute;
-    }
-
-    .nav.is-active {
+        width: 620px;
+        height: 100vh;
+        overflow-x: hidden;
+        right: -620px;
+        background-color: #000000;
+        text-align: left;
+        padding-left: 100px;
+        padding-top: 153px;
+        z-index: 500;
         right: 0;
+        bottom: 0;
+        top: 0;
+        overflow-y: hidden;
     }
 
     .burger-menu {
         display: block;
-        padding-right: 94px;
-        z-index: 15;
+        padding-right: 115px;
     }
 
-    /* light theme  */
-
-    .html.light-theme .nav {
-        background-color: #ffffff;
-    }
-
-    .html.light-theme .header .nav-item a {
-        color: #000000;
-    }
-
-    .html.light-theme .burger-menu.is-active > span {
+    .nav .is-active {
+        margin-right: 0px;
         background-color: #000000;
+        z-index: 10;
+        display: block;
+        right: 0;
+        transition: 1s;
     }
-
-    .html.light-theme .burger-menu.is-active:hover > span {
-        background-color: #bdae82;
-    }
-
-    /*------------*/
 }
 
-@media (max-width:621px){
 
-    .nav {
-        width: 100%;
-    }
+@media (max-width:767px){
 
     .video-player .video-img {
-        height: auto;
+        width: 98%;
     }
 }
 
 @media (max-width:600px){
+
+    .nav .nav-list {
+        width: 420px;
+    }
 
     .burger-menu {
         display: block;
@@ -1031,8 +958,13 @@ h2 {
         max-width: 100%;
     }
 
+    .nav .nav-list {
+        width: 200px;
+        padding-left: 0px;
+    }
+
     .header .nav-item a {
-        font-size: 32px;
+        font-size: 26px;
     }  
 
     .burger-menu {
@@ -1104,6 +1036,10 @@ h2 {
         left: 30%;
     }
 
+    .video-player .video-img {
+        height: auto;
+    }
+
     .price .section-heading {
         left: 33%;
     }
@@ -1126,152 +1062,9 @@ h2 {
     .wrapper-contacts form #textarea {
         width: 90%;
     }
+
+
+
+    
+    
 }
-
-
-/*-- JS events --*/
-
-.header .nav-language .switch-lang .active-lang {
-    color: #bdae82;
-}
-
-.portfolio-btns .active {
-    background-color: #bdae82;
-    color: #000000;
-}
-
-/* switch dark / light theme */
-
-.html.light-theme {
-    background-color: #ffffff;
-}
-
-.features-header .switch-theme-button.light-theme {
-    background: url("../assets/svg/moon-logo.svg") no-repeat center center; 
-    height: 45px;
-    width: 45px;
-    transition-duration: 0.5s;
-}
-
-.html.light-theme .scale a:hover {
-    color: #bdae82;
-    text-shadow: 0 0 1px #6b6144;
-}
-
-.html.light-theme h2 {
-    color: #000000;
-}
-
-.html.light-theme .section-heading {
-    background-color: #ffffff;
-}
-
-.html.light-theme .line-section {
-    border-bottom: solid #000000 2px;
-}
-
-.html.light-theme .skills figcaption {
-    color: #000000;
-}
-
-.html.light-theme .skills ul li p {
-    color: #000000;
-}
-
-.html.light-theme .portfolio-btn {
-    background-color: #ffffff;
-    color: #000000;
-    border: solid #bdae82 2px;
-}
-
-.html.light-theme .portfolio-btn:hover {
-    color: #ffffff;
-    box-shadow: 0px 0px 4px #6b6144 inset;
-    text-shadow: 0 0 5px #6b6144;
-    background-color: #bdae82;
-}
-
-.html.light-theme .portfolio-btns .active {
-    background-color: #bdae82;
-}
-
-.html.light-theme .portfolio .wrapper-photo img:hover {
-    box-shadow: 0px 0px 35px #6d644c;
-}
-
-.html.light-theme .wrapper-price h3 {
-    color: #000000;
-}
-
-.html.light-theme .wrapper-price span {
-    color: #000000;
-}
-
-.html.light-theme .contacts h2 {
-    color: #BDAE82;
-}
-
-
-/* ---------bubbly-button----------- */
-
-
-.bubbly-button:before, .bubbly-button:after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 140%;
-    height: 100%;
-    left: -20%;
-    z-index: -1000;
-    transition: all ease-in-out 0.5s;
-    background-repeat: no-repeat;
-  }
-  .bubbly-button:before {
-    display: none;
-    top: -75%;
-    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 20%, #BDAE82 20%, transparent 30%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
-    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
-  }
-  .bubbly-button:after {
-    display: none;
-    bottom: -75%;
-    background-image: radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, transparent 10%, #BDAE82 15%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%), radial-gradient(circle, #BDAE82 20%, transparent 20%);
-    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-  }
-  .bubbly-button:active {
-    transform: scale(0.9);
-    background-color: #6b6144;
-    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
-  }
-  .bubbly-button.animate:before {
-    display: block;
-    animation: topBubbles ease-in-out 0.75s forwards;
-  }
-  .bubbly-button.animate:after {
-    display: block;
-    animation: bottomBubbles ease-in-out 0.75s forwards;
-  }
-  @keyframes topBubbles {
-    0% {
-      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
-    }
-    50% {
-      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
-    }
-    100% {
-      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
-      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
-  }
-  @keyframes bottomBubbles {
-    0% {
-      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
-    }
-    50% {
-      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
-    }
-    100% {
-      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
-      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-    }
-  }
