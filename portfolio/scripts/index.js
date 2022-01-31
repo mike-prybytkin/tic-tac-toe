@@ -12,6 +12,17 @@ function toggleMenu() {
 burgerMenu.addEventListener('click', toggleMenu);
 
 
+const burgerMenu = document.querySelector('.burger-menu');
+const navList = document.querySelector('.nav-list');
+
+function toggleMenu() {
+    burgerMenu.classList.toggle('is-active');
+    navList.classList.toggle('is-active');
+}
+burgerMenu.addEventListener('click', toggleMenu);
+
+
+
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
@@ -100,7 +111,6 @@ function switchTheme() {
 switchThemeButton.addEventListener('click', switchTheme);
 
 
-
 //-----------bubbly-button--------------
 
 var animateButton = function(e) {
@@ -122,16 +132,9 @@ var animateButton = function(e) {
   }
 
 
-
   // ---- my score ----
   console.log( `Привет друг!
   Смена изображений с подсветкой кнопок реальзован - 25
   Перевод страницы с подсветкой выбранного языка реализован - 25
   Переключение тем с заменой логотипа темы реализован - 25
   Так же на некоторые кнопки добавил эффекты с CodePen`);
-
-
-
-
-
-
