@@ -2,10 +2,12 @@
 
 const burgerMenu = document.querySelector('.burger-menu');
 const nav = document.querySelector('.nav');
+const body = document.querySelector('.body');
 
 function toggleMenu() {
     burgerMenu.classList.toggle('is-active');
     nav.classList.toggle('is-active');
+    body.classList.toggle('is-active');
 };
 burgerMenu.addEventListener('click', toggleMenu);
 
@@ -17,6 +19,7 @@ function closeMenu(event) {
     if (event.target.classList.contains('nav-link')) {
     burgerMenu.classList.remove('is-active');
     nav.classList.remove('is-active');
+    body.classList.remove('is-active');
     }
 };
 
@@ -83,6 +86,41 @@ function getTranslate(lang) {
 
 enLang.addEventListener('click', () => getTranslate('en'));
 ruLang.addEventListener('click', () => getTranslate('ru'));
+
+
+//--switch dark / light theme--
+
+const switchThemeButton = document.querySelector('.switch-theme-button');
+const html = document.querySelector('.html');
+
+function switchTheme() {
+    switchThemeButton.classList.toggle('light-theme');
+    html.classList.toggle('light-theme');
+};
+switchThemeButton.addEventListener('click', switchTheme);
+
+
+
+//-----------bubbly-button--------------
+
+var animateButton = function(e) {
+
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    
+    e.target.classList.add('animate');
+    setTimeout(function(){
+      e.target.classList.remove('animate');
+    },700);
+  };
+  
+  var bubblyButtons = document.getElementsByClassName("bubbly-button");
+  
+  for (var i = 0; i < bubblyButtons.length; i++) {
+    bubblyButtons[i].addEventListener('click', animateButton, false);
+  }
+
 
 
 
