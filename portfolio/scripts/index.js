@@ -123,6 +123,7 @@ var animateButton = function(e) {
 
 
 
+  
   // ---- my score ----
   console.log( `Привет друг!
   Смена изображений с подсветкой кнопок реальзован - 25
