@@ -12,7 +12,6 @@ function toggleMenu() {
 burgerMenu.addEventListener('click', toggleMenu);
 
 
-
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
@@ -122,6 +121,7 @@ var animateButton = function(e) {
   }
 
 
+  
   // ---- my score ----
   console.log( `Привет друг!
   Смена изображений с подсветкой кнопок реальзован - 25
