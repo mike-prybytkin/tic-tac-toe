@@ -78,7 +78,8 @@ main .main-image {
   width: 100px;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
 }
 
