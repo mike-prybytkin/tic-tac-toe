@@ -2,17 +2,19 @@
 
 const audio = new Audio();
 let recordingFile = `./assets/audio/solovey.mp3`; // default bird sound
-const audioLogo = document.querySelector(".audio-logo");
+const audioButton = document.querySelector(".audio-button");
+const logoBird = document.querySelector(".logo-bird");
 
 function controlLogoPlayer() {
   //switch logo and add class "pause"
-  audioLogo.classList.toggle("pause");
+  audioButton.classList.toggle("pause");
+  logoBird.classList.toggle("pause");
 }
 
 function controlPlayer() {
   //player controls
 
-  if (audioLogo.classList.contains("pause")) {
+  if (audioButton.classList.contains("pause")) {
     audio.src = recordingFile;
     audio.currentTime = 0;
     audio.play();
@@ -21,8 +23,8 @@ function controlPlayer() {
   }
 }
 
-audioLogo.addEventListener("click", controlLogoPlayer);
-audioLogo.addEventListener("click", controlPlayer);
+audioButton.addEventListener("click", controlLogoPlayer);
+audioButton.addEventListener("click", controlPlayer);
 
 //--- switch another bird ---
 
@@ -35,7 +37,8 @@ function changeBird(event) {
   if (event.target.classList.contains("btn-bird")) {
     mainImage.style.backgroundImage = `url("./assets/img/${dataAttribute}.jpg")`; //URL image
     recordingFile = `./assets/audio/${dataAttribute}.mp3`; // URL bird sound
-    audioLogo.classList.remove("pause");
+    audioButton.classList.remove("pause");
+    logoBird.classList.remove("pause");
     audio.pause();
   }
 }
