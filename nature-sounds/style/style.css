@@ -75,12 +75,17 @@ main .main-image {
 }
 
 .audio-logo {
+  background: rgba(0, 0, 0, 0.3);
+  background-image: url("../assets/svg/play.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   width: 100px;
+  height: 100px;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 1);
-  background: rgba(0, 0, 0, 0.2);
-  transition-duration: 0.2s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transition-duration: 0.1s;
 }
 
 .audio-logo:active {
@@ -120,4 +125,42 @@ footer div span a:hover {
 
 footer div span {
   margin: 0 5px 0 5px;
+}
+
+/* --- JS events --- */
+
+.audio-logo.pause {
+  background-image: url("../assets/svg/pause.svg");
+  animation: pause ease-in-out;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+}
+
+.audio-logo {
+  animation: play ease-in-out;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+}
+
+@-webkit-keyframes 'pause' {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes 'play' {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-bird.active {
+  transform: scale(1.2);
+  color: #bdae82;
 }
