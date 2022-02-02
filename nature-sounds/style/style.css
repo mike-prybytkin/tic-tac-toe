@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #000000;
+}
+
+header,
+footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+header div,
+footer div {
+  margin: 0 5% 0 5%;
+}
+
+.logo-bird {
+  width: 60px;
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline;
+  margin: 0 10px 0 10px;
+}
+
+.nav button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Neucha", "Arial", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  transition-duration: 0.3s;
+}
+
+.nav button:hover {
+  transform: scale(1.2);
+  color: #bdae82;
+}
+
+.nav button:active {
+  transform: scale(1.1);
+}
+
+main .main-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/img/solovey.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-logo {
+  width: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 1);
+  transition-duration: 0.2s;
+}
+
+.audio-logo:active {
+  transform: scale(0.9);
+}
+
+footer {
+  height: 9vh;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  align-items: center;
+}
+
+.school-logo {
+  height: 40px;
+  transition: 0.3s;
+}
+
+.school-logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+footer div span,
+footer div span a {
+  color: #ffffff;
+  font-family: "Arial", "Helvetica", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer div span a:hover {
+  color: #bdae82;
+}
+
+footer div span {
+  margin: 0 5px 0 5px;
+}
