@@ -33,10 +33,11 @@ header li button {
   font-size: 24px;
 }
 
-main {
+main .container {
   text-align: center;
   min-height: calc(100vh - 100px);
   padding-top: 5%;
+  margin: 0 2% 0 2%;
 }
 
 .main-img {
@@ -62,6 +63,17 @@ main {
 
 .switch-joke:active {
   transform: scale(0.95);
+}
+
+.quote {
+  padding-top: 30px;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+main p span {
+  font-size: 20px;
+  margin-right: 4px;
 }
 
 footer {
