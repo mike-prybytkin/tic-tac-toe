@@ -88,3 +88,10 @@ function preloadImages() {
     img.src = `./assets/img/${i}.png`;
   }
 }
+
+function toggleSpin() {
+  mainImg.classList.toggle("spin");
+}
+switchJokeButton.addEventListener("click", toggleSpin);
+engLang.addEventListener("click", toggleSpin);
+belLang.addEventListener("click", toggleSpin);

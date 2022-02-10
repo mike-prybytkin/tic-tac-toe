@@ -45,6 +45,7 @@ main .container {
   min-height: calc(100vh - 100px);
   padding-top: 5%;
   margin: 0 2% 0 2%;
+  overflow: hidden;
 }
 
 .main-img {
@@ -53,6 +54,33 @@ main .container {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  animation: spin-img-1 ease-in-out;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+}
+
+@keyframes spin-img-1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main-img.spin {
+  animation: spin-img-2 ease-in-out;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+}
+
+@keyframes spin-img-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .switch-joke {
