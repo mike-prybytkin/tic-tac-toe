@@ -55,6 +55,7 @@ async function getQuotes() {
   const data = await res.json();
   showDataBel(data);
 }
+
 function showDataBel(data) {
   if (belLang.classList.contains("active-lang")) {
     let randomNumBel = Math.ceil(Math.random() * data.length);
@@ -78,3 +79,12 @@ switchImage();
 switchJokeButton.addEventListener("click", switchImage);
 engLang.addEventListener("click", switchImage);
 belLang.addEventListener("click", switchImage);
+
+// Image caching
+
+function preloadImages() {
+  for (let i = 1; i <= 17; i++) {
+    const img = new Image();
+    img.src = `./assets/img/${i}.png`;
+  }
+}
