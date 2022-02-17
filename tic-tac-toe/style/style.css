@@ -68,6 +68,11 @@ main .wrapper-box .box {
   font-size: 110px;
   color: #eb5303;
   cursor: pointer;
+  transition: all linear 0.3s;
+}
+
+main .wrapper-box .box:hover {
+  background-color: #5c45c450;
 }
 
 .box:nth-child(1) {
@@ -175,7 +180,7 @@ footer .git-link:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .modal-window {
@@ -220,4 +225,15 @@ footer .git-link:hover {
 
 .modal-window .close-button:hover {
   transform: scale(1.06);
+  z-index: 2;
+}
+
+.fireworks {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.fireworks:hover {
+  z-index: -1;
 }

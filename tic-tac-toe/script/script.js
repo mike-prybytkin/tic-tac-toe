@@ -3,11 +3,13 @@ const whoIsMove = document.querySelector(".who-is-move");
 const message = document.querySelector(".message");
 const wrapperModalResult = document.querySelector(".wrapper-modal-result");
 const closeButton = document.querySelector(".close-button");
+const audio = new Audio();
+let recordingFile = `./assets/audio/fireworks.mp3`;
 let move = 0;
 let result = "";
 
 wrapperBox.addEventListener("click", (e) => {
-  if (e.target.className === "box") {
+  if (e.target.className === "box" && !e.target.textContent) {
     move % 2 === 0 ? (e.target.innerHTML = "X") : (e.target.innerHTML = "O");
     move++;
     check();
@@ -15,7 +17,6 @@ wrapperBox.addEventListener("click", (e) => {
 });
 
 const check = () => {
-  //   const box = document.querySelectorAll("box");
   const box = document.getElementsByClassName("box");
   const winnerArray = [
     [0, 1, 2],
@@ -34,14 +35,14 @@ const check = () => {
       box[winnerArray[i][1]].innerHTML === "X" &&
       box[winnerArray[i][2]].innerHTML === "X"
     ) {
-      result = "crosses";
+      result = "x";
       prepareResult(result);
     } else if (
       box[winnerArray[i][0]].innerHTML === "O" &&
       box[winnerArray[i][1]].innerHTML === "O" &&
       box[winnerArray[i][2]].innerHTML === "O"
     ) {
-      result = "zeros";
+      result = "o";
       prepareResult(result);
     } else if (move === 9 && result === "") {
       result = "nobody";
@@ -53,11 +54,26 @@ const check = () => {
 // show winner
 
 const prepareResult = (winner) => {
-  message.innerHTML = `Winner is ${winner.toUpperCase()}!`;
-  wrapperModalResult.style.display = "block";
+  if (winner === "nobody") {
+    message.innerHTML = `"${winner.toUpperCase()}" won... Try once more!`;
+    wrapperModalResult.style.display = "block";
+  } else {
+    message.innerHTML = `"${winner.toUpperCase()}" won in ${move} moves!`;
+    wrapperModalResult.style.display = "block";
+    winRingtone();
+  }
 };
 
-// close modal window
+// fireworks audio
+
+const winRingtone = () => {
+  audio.src = recordingFile;
+  audio.currentTime = 0;
+  audio.play();
+  audio.loop = true;
+};
+
+// close modal window and reload web-page
 
 const closeModal = () => {
   wrapperModalResult.style.display = "none";
