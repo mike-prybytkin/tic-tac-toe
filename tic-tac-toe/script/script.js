@@ -1,11 +1,14 @@
 const wrapperBox = document.querySelector(".wrapper-box");
+const boxes = document.querySelectorAll(".box");
 const whoIsMove = document.querySelector(".who-is-move");
 const message = document.querySelector(".message");
 const wrapperModalResult = document.querySelector(".wrapper-modal-result");
+const fireworks = document.querySelector(".fireworks");
 const closeButton = document.querySelector(".close-button");
 const audio = new Audio();
 let recordingFile = `./assets/audio/fireworks.mp3`;
 let move = 0;
+let counterGame = 1;
 let result = "";
 
 wrapperBox.addEventListener("click", (e) => {
@@ -55,12 +58,33 @@ const check = () => {
 
 const prepareResult = (winner) => {
   if (winner === "nobody") {
-    message.innerHTML = `"${winner.toUpperCase()}" won... Try once more!`;
+    message.innerHTML = `"${winner.toUpperCase()}" win... Try once more!`;
     wrapperModalResult.style.display = "block";
   } else {
-    message.innerHTML = `"${winner.toUpperCase()}" won in ${move} moves!`;
+    message.innerHTML = `"${winner.toUpperCase()}" win in ${move} moves!`;
     wrapperModalResult.style.display = "block";
+    fireworks.style.display = "block";
     winRingtone();
+  }
+  winnerLocaStorage(winner);
+};
+
+const winnerLocaStorage = (win) => {
+  const totalGameLength = 10;
+  if (win === "nobody") {
+    localStorage.setItem(
+      `Play ${counterGame}`,
+      `"${win.toUpperCase()}" win...`
+    );
+  } else {
+    localStorage.setItem(
+      `Play ${counterGame}`,
+      `Winner is "${win.toUpperCase()}". In ${move} moves!`
+    );
+  }
+  counterGame++;
+  if (counterGame > totalGameLength) {
+    counterGame = 1;
   }
 };
 
@@ -73,15 +97,28 @@ const winRingtone = () => {
   audio.loop = true;
 };
 
-// close modal window and reload web-page
+// close modal window and reset game
 
 const closeModal = () => {
   wrapperModalResult.style.display = "none";
-  location.reload();
+  fireworks.style.display = "none";
+  result = "";
+  audio.pause();
+  boxes.forEach((el) => {
+    el.innerHTML = "";
+  });
+  resetMove();
 };
 
 closeButton.addEventListener("click", closeModal);
 wrapperModalResult.addEventListener("click", closeModal);
+
+// reset move
+
+const resetMove = () => {
+  move = 0;
+  whoMove();
+};
 
 // change 'O' or 'X' who-is-move
 

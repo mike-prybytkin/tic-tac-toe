@@ -194,6 +194,7 @@ footer .git-link:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px #7764ce;
+  z-index: 1;
 }
 
 .modal-window div {
@@ -225,15 +226,12 @@ footer .git-link:hover {
 
 .modal-window .close-button:hover {
   transform: scale(1.06);
-  z-index: 2;
 }
 
 .fireworks {
+  display: none;
   position: absolute;
-  bottom: 0;
-  z-index: 1;
-}
-
-.fireworks:hover {
-  z-index: -1;
+  top: calc(50% - 370px);
+  left: calc(50% - 100px);
+  z-index: 0;
 }
