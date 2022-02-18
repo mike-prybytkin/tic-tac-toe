@@ -1,5 +1,6 @@
 const wrapperBox = document.querySelector(".wrapper-box");
 const boxes = document.querySelectorAll(".box");
+const totalItem = document.querySelectorAll(".total-item");
 const whoIsMove = document.querySelector(".who-is-move");
 const message = document.querySelector(".message");
 const wrapperModalResult = document.querySelector(".wrapper-modal-result");
@@ -69,23 +70,36 @@ const prepareResult = (winner) => {
   winnerLocaStorage(winner);
 };
 
+const totalGameLength = 10;
 const winnerLocaStorage = (win) => {
-  const totalGameLength = 10;
+  let date = new Date().toLocaleTimeString();
   if (win === "nobody") {
     localStorage.setItem(
       `Play ${counterGame}`,
-      `"${win.toUpperCase()}" win...`
+      `"${win.toUpperCase()}" win... ${date}`
     );
   } else {
     localStorage.setItem(
       `Play ${counterGame}`,
-      `Winner is "${win.toUpperCase()}". In ${move} moves!`
+      `Winner is "${win.toUpperCase()}". In ${move} moves! ${date}`
     );
   }
   counterGame++;
   if (counterGame > totalGameLength) {
     counterGame = 1;
   }
+
+  getTotalValue();
+};
+
+// get value from locol storage and show in module window
+
+const getTotalValue = () => {
+  totalItem.forEach((el, i) => {
+    localStorage.getItem(`Play ${i + 1}`) === null
+      ? (el.innerHTML = "- - -")
+      : (el.innerHTML = localStorage.getItem(`Play ${i + 1}`));
+  });
 };
 
 // fireworks audio

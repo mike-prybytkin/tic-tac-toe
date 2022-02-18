@@ -6,6 +6,7 @@
 
 body {
   font-family: "Indie Flower", cursive;
+  background: #000000;
 }
 
 header {
@@ -185,22 +186,23 @@ footer .git-link:hover {
 
 .modal-window {
   width: 340px;
-  height: 300px;
+  height: 460px;
   background: #30226d;
   position: absolute;
-  top: calc(50% - 150px);
+  top: calc(50% - 190px);
   left: calc(50% - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 10px #7764ce;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .modal-window div {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 0px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -231,7 +233,16 @@ footer .git-link:hover {
 .fireworks {
   display: none;
   position: absolute;
-  top: calc(50% - 370px);
+  top: calc(50% - 400px);
   left: calc(50% - 100px);
   z-index: 0;
+}
+
+.total-table span:last-of-type {
+  margin-bottom: 15px;
+}
+
+.total-table span {
+  color: #eb5303;
+  font-size: 18px;
 }
