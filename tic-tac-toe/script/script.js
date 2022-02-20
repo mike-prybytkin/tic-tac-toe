@@ -6,16 +6,17 @@ const message = document.querySelector(".message");
 const wrapperModalResult = document.querySelector(".wrapper-modal-result");
 const fireworks = document.querySelector(".fireworks");
 const closeButton = document.querySelector(".close-button");
-const audio = new Audio();
-let recordingFile = `./assets/audio/fireworks.mp3`;
+const songs = ["fireworks", "click", "kva-kva-kvaa-fail"];
 let move = 0;
 let counterGame = 1;
 let result = "";
+const audio = new Audio();
 
 wrapperBox.addEventListener("click", (e) => {
   if (e.target.className === "box" && !e.target.textContent) {
     move % 2 === 0 ? (e.target.innerHTML = "X") : (e.target.innerHTML = "O");
     move++;
+    audioPlayer(songs[1]);
     check();
   }
 });
@@ -61,17 +62,20 @@ const prepareResult = (winner) => {
   if (winner === "nobody") {
     message.innerHTML = `"${winner.toUpperCase()}" win... Try once more!`;
     wrapperModalResult.style.display = "block";
+    audioPlayer(songs[2]);
   } else {
     message.innerHTML = `"${winner.toUpperCase()}" win in ${move} moves!`;
     wrapperModalResult.style.display = "block";
     fireworks.style.display = "block";
-    winRingtone();
+    audioPlayer(songs[0]);
   }
-  winnerLocaStorage(winner);
+  winnerLocalStorage(winner);
 };
 
+// save value in Local Storage
+
 const totalGameLength = 10;
-const winnerLocaStorage = (win) => {
+const winnerLocalStorage = (win) => {
   let date = new Date().toLocaleTimeString();
   if (win === "nobody") {
     localStorage.setItem(
@@ -92,7 +96,7 @@ const winnerLocaStorage = (win) => {
   getTotalValue();
 };
 
-// get value from locol storage and show in module window
+// get value from Local Storage and show in module window
 
 const getTotalValue = () => {
   totalItem.forEach((el, i) => {
@@ -102,13 +106,11 @@ const getTotalValue = () => {
   });
 };
 
-// fireworks audio
-
-const winRingtone = () => {
-  audio.src = recordingFile;
+// audio player
+const audioPlayer = (song) => {
+  audio.src = `./assets/audio/${song}.mp3`;
   audio.currentTime = 0;
-  audio.play();
-  audio.loop = true;
+  setTimeout(() => audio.play(), 100);
 };
 
 // close modal window and reset game
@@ -117,11 +119,11 @@ const closeModal = () => {
   wrapperModalResult.style.display = "none";
   fireworks.style.display = "none";
   result = "";
-  audio.pause();
   boxes.forEach((el) => {
     el.innerHTML = "";
   });
   resetMove();
+  audioPlayer(songs[1]);
 };
 
 closeButton.addEventListener("click", closeModal);
